@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/documents/page": "/documents",
+  "/login/page": "/login",
+  "/upload/page": "/upload",
+  "/results/[documentId]/page": "/results/[documentId]",
+  "/register/page": "/register"
+}
