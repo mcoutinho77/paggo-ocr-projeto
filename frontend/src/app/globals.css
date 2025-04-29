@@ -1,0 +1,58 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* suas variáveis e estilos customizados abaixo */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-geist-sans: 'Geist', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
+}
+
+/* Aplica as variáveis no tema */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+/* @font-face para Geist, se precisar */
+@font-face {
+  font-family: 'Geist';
+  src: url('/path/to/Geist-Regular.woff2') format('woff2'),
+       url('/path/to/Geist-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/path/to/GeistMono-Regular.woff2') format('woff2'),
+       url('/path/to/GeistMono-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
